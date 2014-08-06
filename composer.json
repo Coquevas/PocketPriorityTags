@@ -1,0 +1,27 @@
+{
+	"name": "coquevas/pocket-priority-tags",
+	"description": "Uses tags to rank your ever-growing reading list based on social networks relevance.",
+	"keywords": ["pocket", "reading list", "priority", "relevance"],
+	"homepage": "https://github.com/Coquevas/PocketPriorityTags",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Jorge Vas Moreno",
+			"email": "coquevas@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"curl/curl": "1.1.*",
+		"duellsy/pockpack": "2.*",
+		"sunra/php-simple-html-dom-parser": "1.5.*",
+		"wp-cli/php-cli-tools": "0.9.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"Pocket": "src/",
+			"SocialCounters": "src/",
+			"URLResolver": "src/"
+		}
+	}
+}
