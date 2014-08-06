@@ -7,10 +7,12 @@ articles based on social networks relevance.
 Each item from your reading list is weighted based on its number of Facebook likes/shares, Google+ +1s and Twitter
 retweets.
 
-After that, `001`, `010` and `040` tags are be assigned to the respective TOP1, TOP10 and TOP40 items. Items belonging 
+After that, `001`, `010` and `040` tags are assigned to the respective TOP1, TOP10 and TOP40 items. Items belonging 
 to more than one group are tagged with both.
 
 Also, items with relevance higher than 100 are tagged with `zz-ROUNDED_RELEVANCE_VALUE` tags.
+
+![Result](https://cloud.githubusercontent.com/assets/1196324/3821358/095b0006-1d0b-11e4-95eb-6a38f06a7ee9.png)
 
 ## Installation
 
@@ -24,7 +26,7 @@ composer install
 ## Authenticate
 
 The [Pocket API](http://getpocket.com/developer/) uses [OAuth like authentication](http://getpocket.com/developer/docs/authentication)
-but as the tool is conceived as a CLI —and that I'm lazy when coding dirty scripts for me— no OAuth redirect is 
+but as the tool is conceived as a CLI —and that I'm lazy when coding sleep deprivating dirty scripts for me— no OAuth redirect is 
 possible so you'll need some extra work before to start using it.
 
 ### Get Consumer Key
