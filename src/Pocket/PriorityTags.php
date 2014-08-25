@@ -242,8 +242,9 @@ class PriorityTags
                 );
             }
 
-            // Each 10 items or if we are ath the last item
-            if ($i % 10 == 10 || $i == $ratedListSize - 1) {
+            $actionCount = count($actions->getActions());
+            $shallSendActions = $actionCount >= 10 || (($i == $ratedListSize - 1) && ($actionCount > 0));
+            if ($shallSendActions) {
                 $apiResponse = '';
 
                 if (!$this->dryRun) {
