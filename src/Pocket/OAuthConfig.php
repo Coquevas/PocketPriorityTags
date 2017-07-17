@@ -20,11 +20,11 @@ class OAuthConfig
 
     static function getConsumerKey()
     {
-        return self::$consumerKey;
+        return getenv('POCKET_API_CONSUMER_KEY') ?: self::$consumerKey;
     }
 
     static function getAccessToken()
     {
-        return self::$accessToken;
+        return getenv('POCKET_API_ACCESS_TOKEN') ?: self::$accessToken;
     }
 }
