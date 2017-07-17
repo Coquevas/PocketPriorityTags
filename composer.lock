@@ -1,22 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "44903563f42d09e983eefc1f70f6be3e",
+    "content-hash": "58327ce41929856f771d866d99eb1c17",
     "packages": [
         {
             "name": "curl/curl",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mod/curl.git",
-                "reference": "45410738dbede9a4caca2fb50446e557f1e7a7af"
+                "reference": "82cac3f504e2c6b31eb0f379dc2f80f6d0e80cbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mod/curl/zipball/45410738dbede9a4caca2fb50446e557f1e7a7af",
-                "reference": "45410738dbede9a4caca2fb50446e557f1e7a7af",
+                "url": "https://api.github.com/repos/php-mod/curl/zipball/82cac3f504e2c6b31eb0f379dc2f80f6d0e80cbb",
+                "reference": "82cac3f504e2c6b31eb0f379dc2f80f6d0e80cbb",
                 "shasum": ""
             },
             "require": {
@@ -56,20 +57,20 @@
                 "curl",
                 "dot"
             ],
-            "time": "2014-06-22 18:15:27"
+            "time": "2014-08-14T20:11:02+00:00"
         },
         {
             "name": "duellsy/pockpack",
-            "version": "v2.4.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/duellsy/pockpack.git",
-                "reference": "fb72366f563a832f4ef125613445655d299a463f"
+                "reference": "7bafa66cd38ab548476d118c739c157ccb46a8b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/duellsy/pockpack/zipball/fb72366f563a832f4ef125613445655d299a463f",
-                "reference": "fb72366f563a832f4ef125613445655d299a463f",
+                "url": "https://api.github.com/repos/duellsy/pockpack/zipball/7bafa66cd38ab548476d118c739c157ccb46a8b0",
+                "reference": "7bafa66cd38ab548476d118c739c157ccb46a8b0",
                 "shasum": ""
             },
             "require": {
@@ -111,20 +112,20 @@
                 "read it later",
                 "readitlater"
             ],
-            "time": "2014-07-16 00:03:32"
+            "time": "2014-08-14T00:17:06+00:00"
         },
         {
             "name": "guzzle/guzzle",
-            "version": "v3.9.1",
+            "version": "v3.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle3.git",
-                "reference": "92d9934f2fca1da15178c91239576ae26e505e60"
+                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/92d9934f2fca1da15178c91239576ae26e505e60",
-                "reference": "92d9934f2fca1da15178c91239576ae26e505e60",
+                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/0645b70d953bc1c067bbc8d5bc53194706b628d9",
+                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9",
                 "shasum": ""
             },
             "require": {
@@ -165,10 +166,13 @@
                 "zendframework/zend-cache": "2.*,<2.3",
                 "zendframework/zend-log": "2.*,<2.3"
             },
+            "suggest": {
+                "guzzlehttp/guzzle": "Guzzle 5 has moved to a new package name. The package you have installed, Guzzle 3, is deprecated."
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.8-dev"
+                    "dev-master": "3.9-dev"
                 }
             },
             "autoload": {
@@ -192,7 +196,7 @@
                     "homepage": "https://github.com/guzzle/guzzle/contributors"
                 }
             ],
-            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "description": "PHP HTTP client. This library is deprecated in favor of https://packagist.org/packages/guzzlehttp/guzzle",
             "homepage": "http://guzzlephp.org/",
             "keywords": [
                 "client",
@@ -203,23 +207,25 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-05-07 17:04:22"
+            "abandoned": "guzzlehttp/guzzle",
+            "time": "2015-03-18T18:23:50+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
-            "version": "v1.5.0",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
-                "reference": "a0b80ace086c7e09085669205e1b3c2c9c7a453c"
+                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/a0b80ace086c7e09085669205e1b3c2c9c7a453c",
-                "reference": "a0b80ace086c7e09085669205e1b3c2c9c7a453c",
+                "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/75b9b1cb64502d8f8c04dc11b5906b969af247c6",
+                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6",
                 "shasum": ""
             },
             "require": {
+                "ext-mbstring": "*",
                 "php": ">=5.3.2"
             },
             "type": "library",
@@ -236,7 +242,11 @@
                 {
                     "name": "Sunra",
                     "email": "sunra@yandex.ru",
-                    "homepage": "http://github.com/sunra"
+                    "homepage": "https://github.com/sunra"
+                },
+                {
+                    "name": "S.C. Chen",
+                    "homepage": "http://sourceforge.net/projects/simplehtmldom/"
                 }
             ],
             "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
@@ -246,31 +256,31 @@
                 "html",
                 "parser"
             ],
-            "time": "2013-05-04 14:32:03"
+            "time": "2016-11-22T22:57:47+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.5.2",
-            "target-dir": "Symfony/Component/EventDispatcher",
+            "version": "v2.8.25",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "2215d2ef6fd7ab24d55576a3d924df575c741762"
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "1377400fd641d7d1935981546aaef780ecd5bf6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/2215d2ef6fd7ab24d55576a3d924df575c741762",
-                "reference": "2215d2ef6fd7ab24d55576a3d924df575c741762",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/1377400fd641d7d1935981546aaef780ecd5bf6d",
+                "reference": "1377400fd641d7d1935981546aaef780ecd5bf6d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.0",
-                "symfony/dependency-injection": "~2.0",
-                "symfony/stopwatch": "~2.2"
+                "symfony/config": "^2.0.5|~3.0.0",
+                "symfony/dependency-injection": "~2.6|~3.0.0",
+                "symfony/expression-language": "~2.6|~3.0.0",
+                "symfony/stopwatch": "~2.3|~3.0.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -279,13 +289,16 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\EventDispatcher\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -294,18 +307,16 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:05:48"
+            "homepage": "https://symfony.com",
+            "time": "2017-06-02T07:47:27+00:00"
         },
         {
             "name": "wp-cli/php-cli-tools",
@@ -355,15 +366,18 @@
                 "cli",
                 "console"
             ],
-            "time": "2014-06-29 20:40:27"
+            "time": "2014-06-29T20:40:27+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "ext-mbstring": "*"
     },
     "platform-dev": []
 }
