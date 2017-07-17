@@ -49,11 +49,10 @@ class SocialCounters
         } else {
             $response = json_decode($curl->response, true);
 
-            if (isset($response['likes'])) {
-                $result += intval($response['likes']);
-            }
-            if (isset($response['shares'])) {
-                $result += intval($response['shares']);
+            $firstElement = reset($response);
+
+            if (isset($firstElement) && isset($firstElement['share'])) {
+                $result += intval($firstElement['share']['share_count']);
             }
         }
 
