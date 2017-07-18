@@ -533,7 +533,7 @@ class URLResolver {
             $this->closeHTMLDOM();
         }
 
-        $this->html_dom = new \simple_html_dom();
+        $this->html_dom = new \simplehtmldom_1_5\simple_html_dom();
         $this->html_dom->load($html_content);
         return $this->html_dom;
     }
