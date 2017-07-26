@@ -19,7 +19,8 @@ require_once __DIR__ . '/src/URLResolver/URLResolver.php';
 $arguments = new \cli\Arguments();
 // TODO: Improve the debug mode to return valuable and comprehensible info or replace with tests
 $arguments->addFlag(array('debug'), 'Turn on verbose output');
-$arguments->addFlag(array('dry-run', 'd'), 'Turn on verbose output');
+$arguments->addFlag(array('dry-run', 'd'), 'Don\'t apply changes');
+$arguments->addFlag(array('silent', 's'), 'Only error output');
 $arguments->addFlag(array('help', 'h'), 'Show this help screen');
 $arguments->parse();
 if ($arguments['help']) {
@@ -50,7 +51,8 @@ if ($arguments['help']) {
             new Pockpack(OAuthConfig::getConsumerKey(), OAuthConfig::getAccessToken()),
             new URLResolver(),
             $arguments['debug'],
-            $arguments['dry-run']
+            $arguments['dry-run'],
+            $arguments['silent']
         );
 
         try {

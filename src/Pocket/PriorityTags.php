@@ -15,6 +15,7 @@ class PriorityTags
     private $curl;
     private $debug = false;
     private $dryRun = false;
+    private $silent = false;
     private $pocket;
     private $resolver;
 
@@ -28,11 +29,12 @@ class PriorityTags
      * @param bool $debug Verbose mode
      * @param bool $dryRun Dry run (no changes)
      */
-    public function __construct(Curl $curl, Pockpack $pocket, URLResolver $resolver, $debug, $dryRun)
+    public function __construct(Curl $curl, Pockpack $pocket, URLResolver $resolver, $debug, $dryRun, $silent)
     {
         $this->curl = $curl;
         $this->debug = $debug;
         $this->dryRun = $dryRun;
+        $this->silent = $silent;
         $this->pocket = $pocket;
         $this->resolver = $resolver;
 
@@ -120,8 +122,8 @@ class PriorityTags
 
     private function retrieveReadingList()
     {
-        $progressBar = new Bar('Downloading reading list', self::TAG_MIN_RATING);
-        $progressBar->tick();
+        if (!$this->silent) $progressBar = new Bar('Downloading reading list', self::TAG_MIN_RATING);
+        if (!$this->silent) $progressBar->tick();
         // TODO: Change pockpak to use the CURLOPT_NOPROGRESS support (and pull request)
         // TODO: Local cache and request only changes since the last OK timestamp
         $options = array('detailType' => 'complete');
@@ -129,7 +131,7 @@ class PriorityTags
             $options['count'] = self::DEBUG_MAX_ITEMS;
         }
         $apiResponse = $this->pocket->retrieve($options);
-        $progressBar->finish();
+        if (!$this->silent) $progressBar->finish();
 
         if ($this->debug) {
             var_dump($apiResponse->list);
@@ -144,7 +146,7 @@ class PriorityTags
      */
     private function computeSocialRating($readingList)
     {
-        $progressBar = new Bar('Getting social relevance', count(get_object_vars($readingList)));
+        if (!$this->silent) $progressBar = new Bar('Getting social relevance', count(get_object_vars($readingList)));
         $ratedList = array();
 
         foreach ($readingList as $savedLink) {
@@ -152,7 +154,7 @@ class PriorityTags
                 var_dump($savedLink);
             }
 
-            $progressBar->tick();
+            if (!$this->silent) $progressBar->tick();
 
             $pocketResolvedUrl = isset($savedLink->resolved_url) ? : $savedLink->given_url;
             $givenUrl = $savedLink->given_url;
@@ -182,7 +184,7 @@ class PriorityTags
                 'item' => $savedLink,
             );
         }
-        $progressBar->finish();
+        if (!$this->silent) $progressBar->finish();
         return $ratedList;
     }
 
@@ -197,10 +199,10 @@ class PriorityTags
 
         $actions = new PockpackQueue();
         $ratedListSize = count($ratedList);
-        $progressBar = new Bar(' Updating priority tags', $ratedListSize);
+        if (!$this->silent) $progressBar = new Bar(' Updating priority tags', $ratedListSize);
 
         for ($i = 0; $i < $ratedListSize; $i++) {
-            $progressBar->tick();
+            if (!$this->silent) $progressBar->tick();
             $item = $ratedList[$i]['item'];
             $rating = $ratedList[$i]['rating'];
             if (isset($item->tags) && count($item->tags) > 0) {
@@ -258,6 +260,6 @@ class PriorityTags
                 $actions->clear();
             }
         }
-        $progressBar->finish();
+        if (!$this->silent) $progressBar->finish();
     }
 }
